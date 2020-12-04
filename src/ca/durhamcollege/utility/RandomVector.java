@@ -1,5 +1,4 @@
-package ca.durhamcollege;
-import org.jetbrains.annotations.NotNull;
+package ca.durhamcollege.utility;
 
 import java.util.Random;
 

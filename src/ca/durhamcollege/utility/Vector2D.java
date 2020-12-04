@@ -1,6 +1,4 @@
-package ca.durhamcollege;
-
-import java.util.Vector;
+package ca.durhamcollege.utility;
 
 public class Vector2D
 {
