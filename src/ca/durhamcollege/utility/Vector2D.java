@@ -5,8 +5,8 @@ import java.util.Random;
 public class Vector2D
 {
     // PRIVATE INSTANCE VARIABLES
-    private float x;
-    private float y;
+    protected float x;
+    protected float y;
 
     // PUBLIC PROPERTIES (MUTATORS & ACCESSORS)
     public float getX()
@@ -192,7 +192,7 @@ public class Vector2D
         final var delta_x = (double) (b.getX()) - (double) (a.getX());
         final var delta_y = (double) (b.getY()) - (double) (a.getY());
 
-        return (float) (Math.sqrt(delta_x * delta_x + delta_y * delta_y));
+        return (float) (Mathf.Sqrt(delta_x * delta_x + delta_y * delta_y));
     }
         public static final Vector2D random(final Vector2D start, Vector2D end)
         {

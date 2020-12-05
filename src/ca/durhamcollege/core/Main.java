@@ -9,6 +9,7 @@ import java.util.Vector;
 public class Main {
 
     public static void main(String[] args) {
+
         Scanner keyboard = new Scanner(System.in);
         String prompt = "";
         int numOfPoints = 4;
