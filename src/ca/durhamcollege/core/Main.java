@@ -43,7 +43,7 @@ public class Main {
             System.out.println("You Entered " + points.get(i+1).toString() + " for the second point" );
             System.out.println("--------------------------------------------------------------\n" );
 
-            Vector2D randomVector2D = RandomVector.Instance().createVector2D(points.get(i), points.get(i+1));
+            Vector2D randomVector2D = Vector2D.random(points.get(i), points.get(i+1));
             System.out.println("\n--------------------------------------------------------------" );
             System.out.println("The Random Vector is: " + randomVector2D.toString());
             System.out.println("--------------------------------------------------------------\n" );

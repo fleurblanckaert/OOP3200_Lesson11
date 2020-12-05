@@ -1,5 +1,7 @@
 package ca.durhamcollege.utility;
 
+import java.util.Random;
+
 public class Vector2D
 {
     // PRIVATE INSTANCE VARIABLES
@@ -131,7 +133,7 @@ public class Vector2D
     @Override
     public String toString()
     {
-        return "(" + x + ", " + y + "}";
+        return "(" + x + ", " + y + ")";
     }
 
     // STATIC METHODS
@@ -186,11 +188,26 @@ public class Vector2D
         return (float)((double)(lhs.getX()) * (double)(rhs.getX()) + (double)(lhs.getY()) * (double)(rhs.getY()));
     }
 
-    public static float distance(final Vector2D a, final Vector2D b)
-    {
-	final var delta_x = (double)(b.getX()) - (double)(a.getX());
-	final var delta_y = (double)(b.getY()) - (double)(a.getY());
+    public static float distance(final Vector2D a, final Vector2D b) {
+        final var delta_x = (double) (b.getX()) - (double) (a.getX());
+        final var delta_y = (double) (b.getY()) - (double) (a.getY());
 
-    return (float)(Math.sqrt(delta_x * delta_x + delta_y * delta_y));
+        return (float) (Math.sqrt(delta_x * delta_x + delta_y * delta_y));
     }
+        public static final Vector2D random(final Vector2D start, Vector2D end)
+        {
+            Random rand = new Random(); //Instance of random number
+
+            //Generate random x val
+            float minX = Mathf.Min(start.getX(), end.getX());
+            float maxX = Mathf.Max(start.getX(), end.getX());
+            float randomX = Mathf.RandomRange(minX, maxX);
+
+            //Generate random y val
+            float minY = Mathf.Min(start.getY(), end.getY());
+            float maxY = Mathf.Max(start.getY(), end.getY());
+            float randomY = Mathf.RandomRange(minY, maxY);
+            return new Vector2D(randomX, randomY);
+        }
+
 }
